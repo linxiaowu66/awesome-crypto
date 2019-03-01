@@ -1,0 +1,37 @@
+{
+  "name": "awesome-crypto",
+  "version": "0.0.1",
+  "description": "util functions for nodejs crypto",
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "test": "cross-env NODE_ENV=test mocha",
+    "release": "rimraf ./dist && npm run build && npm publish"
+  },
+  "files": [
+    "dist",
+    "types"
+  ],
+  "main": "dist/index.js",
+  "engine": "node >= 8.x",
+  "dependencies": {},
+  "devDependencies": {
+    "@types/chai": "^4.1.7",
+    "@types/mocha": "^5.2.6",
+    "@types/node": "^11.9.6",
+    "chai": "^4.2.0",
+    "cross-env": "^5.2.0",
+    "mocha": "^6.0.2",
+    "rimraf": "^2.6.2",
+    "ts-node": "^8.0.2",
+    "typescript": "^3.3.3333"
+  },
+  "homepage": "https://github.com/linxiaowu66/awesome-crypto",
+  "bugs": {
+    "url": "https://github.com/linxiaowu66/awesome-crypto/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:linxiaowu66/awesome-crypto.git"
+  },
+  "license": "MIT"
+}
