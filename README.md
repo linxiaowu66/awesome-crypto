@@ -1,5 +1,7 @@
 # utility encapsulation for nodejs crypto module
 
+<a href="https://nodei.co/npm/awesome-crypto-nodejs"><img src="https://nodei.co/npm/awesome-crypto-nodejs.png" alt="NPM Stats" title="NPM Stats" /></a>
+
 directory structure:
 
     ├── test 单元测试文件
@@ -13,3 +15,7 @@ directory structure:
     │   ├── hmac 封装了Hmac摘要相关的方法类
     │   ├── sign 封装了签名相关的方法类
     │   └── verify 封装了签名验证相关的方法类
+
+## Install
+
+`yarn add awesome-crypto-nodejs` / `npm install awesome-crypto-nodejs`

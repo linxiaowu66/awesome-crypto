@@ -1,5 +1,5 @@
 {
-  "name": "awesome-crypto",
+  "name": "awesome-crypto-nodejs",
   "version": "0.0.1",
   "description": "util functions for nodejs crypto",
   "scripts": {
@@ -11,6 +11,9 @@
     "dist",
     "types"
   ],
+  "engines": {
+    "node": ">=8.0.0"
+  },
   "main": "dist/index.js",
   "engine": "node >= 8.x",
   "dependencies": {},
