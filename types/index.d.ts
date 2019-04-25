@@ -1,22 +1,22 @@
 import { HexBase64BinaryEncoding, Utf8AsciiBinaryEncoding, HexBase64Latin1Encoding } from 'crypto'
-import { ICipherOption } from '../lib/cipher';
+export interface ICipherOption {
+  secret: string;
+  iv?: string; // ECB模式不需要
+}
 export interface Deferred {
   resolve: (value?: any) => any
   reject: (reason?: any) => void
   promise: Promise<any>
 }
 
-export namespace AwesomeCrypto {
-  export class Cipher {
-    constructor(ICipherOption);
+export class Cipher {
+  constructor(option: ICipherOption);
 
-    encryptAES(text: string, algorithm: string, outputEncoding: HexBase64BinaryEncoding);
-    decryptAES(text: string, algorithm: string, outputEncoding: Utf8AsciiBinaryEncoding);
-    encrypyDES(text: string, algorithm: string, outputEncoding: HexBase64BinaryEncoding);
-    decrypyDES(text: string, algorithm: string, outputEncoding: Utf8AsciiBinaryEncoding);
-  }
-
-  export class Hash {
-    generateDigest(algorithm: string, text: string, encoding: HexBase64Latin1Encoding)
-  }
+  encryptAES(text: string, algorithm: string, outputEncoding: HexBase64BinaryEncoding): string;
+  decryptAES(text: string, algorithm: string, outputEncoding: Utf8AsciiBinaryEncoding): string;
+  encrypyDES(text: string, algorithm: string, outputEncoding: HexBase64BinaryEncoding): string;
+  decrypyDES(text: string, algorithm: string, outputEncoding: Utf8AsciiBinaryEncoding): string;
+}
+export class Hash {
+  generateDigest(algorithm: string, text: string, encoding: HexBase64Latin1Encoding): string
 }

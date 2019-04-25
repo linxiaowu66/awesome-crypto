@@ -1,6 +1,6 @@
 {
   "name": "awesome-crypto-nodejs",
-  "version": "0.0.1",
+  "version": "0.0.6",
   "description": "util functions for nodejs crypto",
   "scripts": {
     "build": "tsc -p tsconfig.json",
@@ -9,8 +9,12 @@
   },
   "files": [
     "dist",
-    "types"
+    "types",
+    "lib",
+    "tsconfig.json",
+    "README.md"
   ],
+  "types": "./types/index.d.ts",
   "engines": {
     "node": ">=8.0.0"
   },

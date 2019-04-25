@@ -1,10 +1,7 @@
 import * as crypto from 'crypto';
 import { HexBase64BinaryEncoding, Utf8AsciiBinaryEncoding } from 'crypto'
+import { ICipherOption } from '../types/index'
 
-export interface ICipherOption {
-  secret: string;
-  iv?: string; // ECB模式不需要
-}
 
 const IVLength = 16
 
