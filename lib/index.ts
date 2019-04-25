@@ -1,5 +1,5 @@
-import * as Cipher from './cipher'
-import * as Hash from './hash'
+import Cipher from './cipher'
+import Hash from './hash'
 
 export {
   Cipher,
