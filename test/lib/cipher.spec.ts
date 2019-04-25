@@ -12,6 +12,11 @@ describe('testing cipher class', () => {
 
     expect(result).to.eq('MVWcig9Hm1XrfeDxuE3xrw==')
   })
+  it('should decrypt data with aes-128-ecb successfully', () => {
+    const result = instance.decryptAES('MVWcig9Hm1XrfeDxuE3xrw==', 'aes-128-ecb', 'utf8')
+
+    expect(result).to.eq('awesome-crypto')
+  })
   it('should encrypt data with aes-128-cbc successfully', () => {
     const result = instance.encryptAES('awesome-crypto', 'aes-128-cbc', 'base64')
 
