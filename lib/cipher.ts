@@ -90,7 +90,7 @@ export default class Cipher {
     return encrypted + cipher.final(outputEncoding)
   }
   /**
-   * DES加密
+   * DES解密
    * @param text 需要解密的文本
    * @param algorithm 算法
    * @param outputEncoding 输出编码
