@@ -19,3 +19,13 @@ directory structure:
 ## Install
 
 `yarn add awesome-crypto-nodejs` / `npm install awesome-crypto-nodejs`
+
+## How to Use
+
+eg:
+
+```
+import { Hash } from 'awesome-crypto-nodejs';
+
+const ret = new Hash().generateDigest('md5', 'test me', 'base64')
+```
