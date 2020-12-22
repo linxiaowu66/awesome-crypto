@@ -1,8 +1,4 @@
-import {
-  HexBase64BinaryEncoding,
-  Utf8AsciiBinaryEncoding,
-  HexBase64Latin1Encoding,
-} from "crypto";
+import { HexBase64BinaryEncoding, HexBase64Latin1Encoding } from "crypto";
 export interface ICipherOption {
   secret: string;
   iv?: string; // ECB模式不需要
@@ -24,7 +20,7 @@ export class Cipher {
   decryptAES(
     text: string,
     algorithm: string,
-    outputEncoding: Utf8AsciiBinaryEncoding
+    inputEncoding: HexBase64BinaryEncoding
   ): string;
   encrypyDES(
     text: string,
@@ -34,7 +30,7 @@ export class Cipher {
   decrypyDES(
     text: string,
     algorithm: string,
-    outputEncoding: Utf8AsciiBinaryEncoding
+    inputEncoding: HexBase64BinaryEncoding
   ): string;
 }
 export class Hash {
