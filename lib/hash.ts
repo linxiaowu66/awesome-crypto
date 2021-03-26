@@ -1,5 +1,5 @@
 import * as crypto from "crypto";
-import { HexBase64Latin1Encoding } from "crypto";
+import { Encoding } from "crypto";
 
 export default class Hash {
   /**
@@ -8,11 +8,7 @@ export default class Hash {
    * @param text 需要做Hash算法的原数据
    * @param encoding 输出的结果编码
    */
-  public generateDigest(
-    algorithm: string,
-    text: string,
-    encoding: HexBase64Latin1Encoding
-  ) {
+  public generateDigest(algorithm: string, text: string, encoding: Encoding) {
     const hash = crypto.createHash(algorithm);
     const dataDigest = hash.update(text).digest(encoding);
     return dataDigest;
@@ -29,7 +25,7 @@ export default class Hash {
     algorithm: string,
     key: string,
     text: string,
-    encoding: HexBase64Latin1Encoding
+    encoding: Encoding
   ) {
     const hash = crypto.createHmac(algorithm, key);
     const dataDigest = hash.update(text).digest(encoding);

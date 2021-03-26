@@ -1,5 +1,5 @@
 import * as crypto from "crypto";
-import { HexBase64BinaryEncoding, Utf8AsciiBinaryEncoding } from "crypto";
+import { Encoding } from "crypto";
 import { ICipherOption } from "../types/index";
 
 const IVLength = 16;
@@ -39,11 +39,7 @@ export default class Cipher {
    * @param algorithm 算法
    * @param outputEncoding 输出编码
    */
-  public encryptAES(
-    text: string,
-    algorithm: string,
-    outputEncoding: HexBase64BinaryEncoding
-  ) {
+  public encryptAES(text: string, algorithm: string, outputEncoding: Encoding) {
     if (!algorithm.match("aes")) {
       throw new Error("encryptAES only can process aes encryption");
     }
@@ -68,11 +64,7 @@ export default class Cipher {
    * @param algorithm 算法
    * @param outputEncoding 输出编码
    */
-  public decryptAES(
-    text: string,
-    algorithm: string,
-    inputEncoding: HexBase64BinaryEncoding
-  ) {
+  public decryptAES(text: string, algorithm: string, inputEncoding: Encoding) {
     if (!algorithm.match("aes")) {
       throw new Error("encryptAES only can process aes decryption");
     }
@@ -100,11 +92,7 @@ export default class Cipher {
    * @param algorithm 算法
    * @param outputEncoding 输出编码
    */
-  public encrypyDES(
-    text: string,
-    algorithm: string,
-    outputEncoding: HexBase64BinaryEncoding
-  ) {
+  public encrypyDES(text: string, algorithm: string, outputEncoding: Encoding) {
     if (!algorithm.match("des")) {
       throw new Error("encryptDES only can process des encryption");
     }
@@ -123,11 +111,7 @@ export default class Cipher {
    * @param algorithm 算法
    * @param outputEncoding 输出编码
    */
-  public decrypyDES(
-    text: string,
-    algorithm: string,
-    inputEncoding: HexBase64BinaryEncoding
-  ) {
+  public decrypyDES(text: string, algorithm: string, inputEncoding: Encoding) {
     if (!algorithm.match("des")) {
       throw new Error("encryptDES only can process des encryption");
     }

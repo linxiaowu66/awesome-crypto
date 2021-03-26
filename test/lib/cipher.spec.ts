@@ -19,7 +19,7 @@ describe("testing cipher class", () => {
     expect(result).to.eq("MVWcig9Hm1XrfeDxuE3xrw==");
   });
   it("should encrypt data(hex) with aes-128-ecb successfully", () => {
-    const result = instance.encryptAES("awesome-crypto", "aes-128-ecb", "hex");
+    const result = instance.encryptAES("726791", "aes-128-ecb", "hex");
 
     expect(result).to.eq("31559c8a0f479b55eb7de0f1b84df1af");
   });

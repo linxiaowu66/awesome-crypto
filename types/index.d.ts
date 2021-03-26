@@ -1,4 +1,4 @@
-import { HexBase64BinaryEncoding, HexBase64Latin1Encoding } from "crypto";
+import { Encoding } from "crypto";
 export interface ICipherOption {
   secret: string;
   iv?: string; // ECB模式不需要
@@ -12,37 +12,17 @@ export interface Deferred {
 export class Cipher {
   constructor(option: ICipherOption);
 
-  encryptAES(
-    text: string,
-    algorithm: string,
-    outputEncoding: HexBase64BinaryEncoding
-  ): string;
-  decryptAES(
-    text: string,
-    algorithm: string,
-    inputEncoding: HexBase64BinaryEncoding
-  ): string;
-  encrypyDES(
-    text: string,
-    algorithm: string,
-    outputEncoding: HexBase64BinaryEncoding
-  ): string;
-  decrypyDES(
-    text: string,
-    algorithm: string,
-    inputEncoding: HexBase64BinaryEncoding
-  ): string;
+  encryptAES(text: string, algorithm: string, outputEncoding: Encoding): string;
+  decryptAES(text: string, algorithm: string, inputEncoding: Encoding): string;
+  encrypyDES(text: string, algorithm: string, outputEncoding: Encoding): string;
+  decrypyDES(text: string, algorithm: string, inputEncoding: Encoding): string;
 }
 export class Hash {
-  generateDigest(
-    algorithm: string,
-    text: string,
-    encoding: HexBase64Latin1Encoding
-  ): string;
+  generateDigest(algorithm: string, text: string, encoding: Encoding): string;
   generateDigestWithHmac(
     algorithm: string,
     key: string,
     text: string,
-    encoding: HexBase64Latin1Encoding
+    encoding: Encoding
   ): string;
 }
