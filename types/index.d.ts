@@ -1,4 +1,4 @@
-import { Encoding } from "crypto";
+import { Encoding, BinaryToTextEncoding } from "crypto";
 export interface ICipherOption {
   secret: string;
   iv?: string; // ECB模式不需要
@@ -18,11 +18,15 @@ export class Cipher {
   decrypyDES(text: string, algorithm: string, inputEncoding: Encoding): string;
 }
 export class Hash {
-  generateDigest(algorithm: string, text: string, encoding: Encoding): string;
+  generateDigest(
+    algorithm: string,
+    text: string,
+    encoding: BinaryToTextEncoding
+  ): string;
   generateDigestWithHmac(
     algorithm: string,
     key: string,
     text: string,
-    encoding: Encoding
+    encoding: BinaryToTextEncoding
   ): string;
 }
