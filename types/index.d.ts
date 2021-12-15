@@ -3,11 +3,6 @@ export interface ICipherOption {
   secret: string;
   iv?: string; // ECB模式不需要
 }
-export interface Deferred {
-  resolve: (value?: any) => any;
-  reject: (reason?: any) => void;
-  promise: Promise<any>;
-}
 
 export class Cipher {
   constructor(option: ICipherOption);
